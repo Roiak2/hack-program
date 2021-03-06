@@ -11,9 +11,10 @@ import datetime #to get dates and times
 import numpy as np #to get list of numbers
 import pandas as pd #pandas to parse through csv
 
-#Loading csv of inspiring quotes from GitHub Gist JakubPetriska: https://gist.github.com/JakubPetriska/060958fd744ca34f099e947cd080b540
-URL = "https://gist.github.com/JakubPetriska/060958fd744ca34f099e947cd080b540"
-quotes = pd.read_csv(URL, sep=" ")
+#getting url for dataframe of Einstein quotes
+url="https://raw.githubusercontent.com/lukin0110/quotes/master/quotes/albert_einstein.csv"
+#Reading into a csv file
+data = pd.read_csv(url, sep= " ")
 
 #define function to ask patient to confirm or cancel
 def confirm(answer):
@@ -46,7 +47,10 @@ def confirm(answer):
     hour = random.choice(random_hour) #sample one hour
         
     #get random quote from csv of inspirational quotes
-    QUOTE= quotes.sample()
+    #randomly sampling a number from 1 to 100
+    x = np.random.randint(0, 100, 1)
+    #using that number to pick a random row from csv of quotes
+    QUOTE = print(data['quote'].values[x])
         
     #Print prompt and ask for input
     print("You have an appointment scheuled for ",date,hour)
@@ -55,7 +59,7 @@ def confirm(answer):
     #If patient says yes, confirm appointment and give quote
     if answer == "YES":
             print("Thank you for confirming. See you on, ", date,hour,
-            "Here is an inspirational quote meanwhile: ", QUOTE)
+            "Here is an inspirational Einstein quote meanwhile: ", QUOTE)
     #If patient says no thank them and bye bye    
     if answer == "NO":
         print("Thank you for cancelling. Goodbye!")
