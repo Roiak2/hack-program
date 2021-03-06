@@ -50,7 +50,7 @@ def confirm(answer):
     #randomly sampling a number from 1 to 100
     x = np.random.randint(0, 100, 1)
     #using that number to pick a random row from csv of quotes
-    QUOTE = print(data['quote'].values[x])
+    QUOTE = data['quote'].values[x]
         
     #Print prompt and ask for input
     print("You have an appointment scheuled for ",date,hour)
