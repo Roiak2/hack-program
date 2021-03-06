@@ -12,6 +12,9 @@ The appointment time currently is randomly generated for this year between 9-5.
 
 In the future it might get input from doctor's office for patient appoitnment information, and then based on patient identity query their phone number to send them this reminder.
 
+The program also randomly samples from a database of inspirational quotes.
+If the patient confirms an appointment, they will receive an inspirational quote.
+
 ## User manual
 
 To get help for which commands in the program do what, run this:
