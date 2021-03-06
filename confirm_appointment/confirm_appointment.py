@@ -12,7 +12,7 @@ import numpy as np #to get list of numbers
 import pandas as pd #pandas to parse through csv
 
 #Loading csv of inspiring quotes from GitHub Gist JakubPetriska: https://gist.github.com/JakubPetriska/060958fd744ca34f099e947cd080b540
-quotes = pd.read_csv("./quotes.csv")
+quotes = pd.read_csv("./confirm_appointment/quotes.csv")
 
 #creating class with our functions
 class DrApptQuote:
